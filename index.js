@@ -1,6 +1,7 @@
 const express = require("express");
 require("dotenv").config();
 const authRoutes = require("./routes/authRoutes.js");
+const userRoutes = require("./routes/user.route.js");
 // const jsomwebtoken = require("jsonwebtoken");
 
 // custom imports
@@ -12,6 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // routes
 app.use("/api/auth", authRoutes);
+app.use("/api/users", userRoutes);
 // connecting to db
 connectDB();
 // starting the server
