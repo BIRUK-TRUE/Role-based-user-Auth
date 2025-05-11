@@ -3,13 +3,13 @@ const userSchema = new mongoose.Schema(
   {
     username: {
       type: String,
-      require: true,
+      required: true,
       unique: true,
-      trime: true,
+      trim: true,
     },
     password: {
-      typr: String,
-      require: true,
+      type: String,
+      required: true,
     },
     role: {
       type: String,
